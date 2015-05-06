@@ -112,14 +112,16 @@ GNU General Public License : http://www.gnu.org/licenses/
         </div>
     </div>
 
-
     <header class="container" role="banner">
         <div class="header">
-            <h1 class="logo">
-                <a href="{navigate to="index"}" title="{$store_name}">
-                    {images file='assets/img/logo.gif'}<img src="{$asset_url}" alt="{$store_name}">{/images}
-                </a>
-            </h1>
+            <div class="container titlerow">
+                <h1 class="logo titlerow">
+                    <a href="{navigate to="index"}" title="{$store_name}">
+                        {images file='assets/img/logo.png'}<img src="{$asset_url}" alt="{$store_name}">{/images}
+                    </a>
+                </h1>
+                <h1 class="title titlerow"><a href="{navigate to="index"}">{$store_name}</a></h1>
+            </div>
             {hook name="main.navbar-primary"}
         </div>
     </header><!-- /.header -->

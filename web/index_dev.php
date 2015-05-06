@@ -24,6 +24,7 @@ require __DIR__ . '/../core/vendor/autoload.php';
 $trustedIp = array(
   '::1',
   '127.0.0.1',
+  '192.168.0.100',
 );
 
 $request = Request::createFromGlobals();

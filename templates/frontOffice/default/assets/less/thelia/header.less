@@ -4,13 +4,27 @@ header {
         .make-row();
         margin-bottom: @line-height-computed;
 
-        .logo {
-            .make-md-column(4);
+        .titlerow {
             .hidden-xs;
             margin-top: 0;
+            padding: 0;
             a {
                 text-decoration: none;
             }
+        }
+
+        .logo {
+            .make-md-column(2);
+            padding: 0;
+        }
+
+        .title {
+            .make-md-column(10);
+            margin-top: 45px;
+            font-family: @font-family-title;
+            font-size: 130px;
+            line-height: 70%;
+            text-align: center;
         }
 
         .language-container {

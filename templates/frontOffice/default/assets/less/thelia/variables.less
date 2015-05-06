@@ -1,5 +1,16 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Luckiest+Guy);
+
 // Theme colors
 @brand-primary:                     #f49a17;
+
+@body-bg:                           #ffeacf;
+
+@font-family-title:                 'Luckiest Guy', @font-family-base;
+@font-family-sans-serif:            'Open Sans', sans-serif;
+@font-family-serif:                 Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:             Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-base:                  @font-family-sans-serif;
 
 // Iconography
 @FontAwesomePath:                   "../font/fontawesome";
@@ -26,6 +37,10 @@
 // Thelia : Breadcrumbs
 @breadcrumb-padding:                8px 15px;
 
+// Navbar
+@navbar-default-color:              darken(@navbar-default-bg, 52%); //#707070;
+@navbar-default-bg:                 darken(@body-bg, 4%);
+@navbar-default-border:             @body-bg;
 
 // Navbar links
 @navbar-default-link-hover-color:   #fff;
