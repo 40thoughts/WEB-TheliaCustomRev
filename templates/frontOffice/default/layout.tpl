@@ -216,7 +216,7 @@ GNU General Public License : http://www.gnu.org/licenses/
                         <li><a href="{url path="/contact"}">{intl l="Contact Us"}</a></li>
                     </ul>
                 </nav>
-                <section class="copyright">{intl l="Copyright"} &copy; <time datetime="{'Y-m-d'|date}">{'Y'|date}</time> <a href="http://thelia.net" rel="external">Thelia</a></section>
+                <section class="copyright">{intl l="Copyright"} &copy; <time datetime="{'Y-m-d'|date}">{'Y'|date}</time> <a href="{navigate to="index"}" rel="external">{$store_name}</a></section>
             </div>
         </div>
     </footer><!-- /.footer-info -->
