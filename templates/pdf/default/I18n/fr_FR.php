@@ -6,7 +6,7 @@ return array(
     'Delivery address' => 'Adresse de livraison',
     'Delivery module' => 'Module de livraison',
     'Discount' => 'Remise',
-    'Email: ' => 'Email :',
+    'Email: ' => 'Email : ',
     'INVOICE' => 'FACTURE',
     'Invoice REF' => 'Ref de facture',
     'Invoice address' => 'Adresse de facturation',
