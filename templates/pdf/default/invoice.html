@@ -226,7 +226,13 @@
     {hook name="invoice.after-addresses" order=$order_id}
 
     <table cellspacing="0" cellpadding="0" style="padding-top: 5mm;">
-        <col style="width: 40%; padding: 1mm;" />
+        {if $TOTAL_TAX ne ""}
+            <col style="width: 40%; padding: 1mm;" />
+            <col style="width: 12%; padding: 1mm;" />
+            <col style="width: 12%; padding: 1mm;" />
+        {else}
+            <col style="width: 64%; padding: 1mm;" />
+        {/if}
         <col style="width: 12%; padding: 1mm;" />
         <col style="width: 12%; padding: 1mm;" />
         <col style="width: 12%; padding: 1mm;" />
@@ -236,10 +242,15 @@
         <tr class="table-1">
             <td><h4>{intl l="Product"}</h4></td>
             <td><h4 class="align-center">{intl l="Unit. price"}</h4></td>
-            <td><h4 class="align-center">{intl l="Tax"}</h4></td>
-            <td><h4 class="align-center">{intl l="Unit taxed price"}</h4></td>
-            <td><h4 class="align-center">{intl l="Quantity"}</h4></td>
-            <td style="background:#f6993c"><h4 style="color:white;" class="align-center">{intl l="Taxed total"}</h4></td>
+            {if $TOTAL_TAX ne ""}
+                <td><h4 class="align-center">{intl l="Tax"}</h4></td>
+                <td><h4 class="align-center">{intl l="Unit taxed price"}</h4></td>
+                <td><h4 class="align-center">{intl l="Quantity"}</h4></td>
+                <td style="background:#f6993c"><h4 style="color:white;" class="align-center">{intl l="Taxed total"}</h4></td>
+            {else}
+                <td><h4 class="align-center">{intl l="Quantity"}</h4></td>
+                <td style="background:#f6993c"><h4 style="color:white;" class="align-center">{intl l="Total"}</h4></td>
+            {/if}
         </tr>
         {loop type="order_product" name="order-products" order=$ID}
             {if $WAS_IN_PROMO == 1}
@@ -264,8 +275,10 @@
                     {/ifloop}
                 </td>
                 <td><p class="align-right">{format_money number=$realPrice symbol=$orderCurrency}</p></td>
-                <td><p class="align-right">{format_money number=$realTax symbol=$orderCurrency}</p></td>
-                <td><p class="align-right">{format_money number=$realTaxedPrice symbol=$orderCurrency}</p></td>
+                {if $TOTAL_TAX ne ""}
+                    <td><p class="align-right">{format_money number=$realTax symbol=$orderCurrency}</p></td>
+                    <td><p class="align-right">{format_money number=$realTaxedPrice symbol=$orderCurrency}</p></td>
+                {/if}
                 <td><p class="align-center">{$QUANTITY}</p></td>
                 <td><p class="align-right">{format_money number={$realTaxedPrice * $QUANTITY} symbol=$orderCurrency}</p></td>
             </tr>
@@ -306,7 +319,11 @@
                     </tr>
                     {/if}
                     <tr>
-                        <td class="table-3-1"><p>{intl l="Total without tax"}</p></td>
+                        {if $TOTAL_TAX ne ""}
+                            <td class="table-3-1"><p>{intl l="Total without tax"}</p></td>
+                        {else}
+                            <td class="table-3-1"><p>{intl l="Total"}</p></td>
+                        {/if}
                         <td class="table-3-1 align-right"><p>{format_money number={$TOTAL_AMOUNT - $POSTAGE} symbol=$orderCurrency}</p></td>
                     </tr>
                     {strip}
@@ -330,12 +347,12 @@
                         <td class="table-3-1"><p>{intl l="Tax"}</p></td>
                         <td class="table-3-1 align-right"><P>{format_money number=$TOTAL_TAX symbol=$orderCurrency}</P></td>
                     </tr>
-                    {$smarty.capture.tax nofilter}
-                    {/if}
                     <tr>
                         <td class="table-3-1"><p>{intl l="Total with tax"}</p></td>
                         <td class="table-3-1 align-right"><P>{format_money number={$TOTAL_TAXED_AMOUNT - $POSTAGE_UNTAXED} symbol=$orderCurrency}</P></td>
                     </tr>
+                    {$smarty.capture.tax nofilter}
+                    {/if}
                     <tr>
                         <td class="table-3-1"><p>{intl l="Postage"}</p></td>
                         <td class="table-3-1 align-right"><p>{format_money number=$POSTAGE symbol=$orderCurrency}</p></td>
