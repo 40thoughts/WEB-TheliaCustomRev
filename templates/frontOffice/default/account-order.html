@@ -156,10 +156,12 @@
                         <span class="hidden-xs">{intl l="Unit Price"}</span>
                         <span class="visible-xs">{intl l="Price"}</span>
                     </th>
+                    {if $TOTAL_TAX ne ""}
                     <th class="unitprice">
                         <span class="hidden-xs">{intl l="Unit Taxed Price"}</span>
                         <span class="visible-xs">{intl l="Taxed Price"}</span>
                     </th>
+                    {/if}
                     <th class="qty">
                         <span class="hidden-xs">{intl l="Quantity"}</span>
                         <span class="visible-xs">{intl l="Qty"}</span>
@@ -205,7 +207,9 @@
                         {/ifloop}
                     </td>
                     <td class="unitprice"><p>{format_money number=$realPrice symbol=$orderCurrency}</p></td>
+                    {if $TOTAL_TAX ne ""}
                     <td class="unitprice"><p>{format_money number=$realTaxedPrice symbol=$orderCurrency}</p></td>
+                    {/if}
                     <td class="qty"><p>{$QUANTITY}</p></td>
                     <td class="subprice"><p>{format_money number={$realTaxedPrice * $QUANTITY} symbol=$orderCurrency}</p></td>
                 </tr>
@@ -242,7 +246,11 @@
                         </tr>
                         {/if}
                         <tr>
+                            {if $TOTAL_TAX ne ""}
                             <td><p>{intl l="Total without tax"}</p></td>
+                            {else}
+                            <td><p>{intl l="Total"}</p></td>
+                            {/if}
                             <td><p>{format_money number={$TOTAL_AMOUNT - $POSTAGE} symbol=$orderCurrency}</p></td>
                         </tr>
                         {strip}
@@ -268,10 +276,12 @@
                             </tr>
                             {$smarty.capture.tax nofilter}
                         {/if}
-                        <tr>
-                            <td><p>{intl l="Total with tax"}</p></td>
-                            <td><P>{format_money number={$TOTAL_TAXED_AMOUNT - $POSTAGE} symbol=$orderCurrency}</P></td>
-                        </tr>
+                        {if $TOTAL_TAX ne ""}
+                            <tr>
+                                <td><p>{intl l="Total with tax"}</p></td>
+                                <td><P>{format_money number={$TOTAL_TAXED_AMOUNT - $POSTAGE} symbol=$orderCurrency}</P></td>
+                            </tr>
+                        {/if}
                         <tr>
                             <td><p>{intl l="Postage"}</p></td>
                             <td><p>{format_money number=$POSTAGE symbol=$orderCurrency}</p></td>
