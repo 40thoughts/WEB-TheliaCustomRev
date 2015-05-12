@@ -446,15 +446,6 @@ body,#bodyTable{
                                         <table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 600px;border-collapse: collapse !important;">
                                             <tr>
                                                 <td valign="top" class="footerContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #808080;font-family: Helvetica;font-size: 10px;line-height: 150%;padding-top: 20px;text-align: left;border-collapse: collapse !important;">
-                                                    <strong>{intl l="Our mailing address is:"}</strong>
-                                                    <br>
-                                                    {config key="store_address1"} {config key="store_address2"} {config key="store_address3"}<br>
-                                                    {config key="store_zipcode"} {config key="store_city"},
-                                                    {if {config key="store_country"} }
-                                                        {loop type="country" name="address.country.title" id={config key="store_country"}}, {$TITLE}{/loop}
-                                                    {/if}
-                                                    <br>
-                                                    <br>
                                                     <em>{intl l="Copyright"} &copy; {'Y'|date} {$company_name}, {intl l="All rights reserved."}</em>
                                                 </td>
                                             </tr>
