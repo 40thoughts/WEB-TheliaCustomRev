@@ -1,22 +1,4 @@
 <!doctype html>
-<!--
- ______   __  __     ______     __         __     ______
-/\__  _\ /\ \_\ \   /\  ___\   /\ \       /\ \   /\  __ \
-\/_/\ \/ \ \  __ \  \ \  __\   \ \ \____  \ \ \  \ \  __ \
-   \ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\  \ \_\ \_\
-    \/_/   \/_/\/_/   \/_____/   \/_____/   \/_/   \/_/\/_/
-
-
-Copyright (c) OpenStudio
-email : info@thelia.net
-web : http://www.thelia.net
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 3 of the
-GNU General Public License : http://www.gnu.org/licenses/
--->
-
 {* Declare assets directory, relative to template base directory *}
 {declare_assets directory='assets'}
 {* Set the default translation domain, that will be used by {intl} when the 'd' parameter is not set *}
