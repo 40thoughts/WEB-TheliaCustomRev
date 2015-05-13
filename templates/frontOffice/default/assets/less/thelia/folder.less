@@ -80,17 +80,19 @@
         > article {
             .make-row();
             margin-left: 0;
+            background-color: #f5f5f5;
+            border-radius: 4px;
 
             .content-image {
                 .make-sm-column(2);
-                margin-bottom: 15px; padding: 0;
+                margin-bottom: 15px; padding: 0; padding-top: 10px; padding-left: 10px;
                 > img { .img-responsive(); width: 100%; }
                 > .mask {}
             }
 
             .content-info {
-                .make-sm-column(7);
-                .name { margin-top: 0; }
+                .make-sm-column(10);
+                .name { margin: 10px; padding: 10px; background-color: #e4e4e4; border-radius: 4px; }
                 .description {}
                 .short-description {}
             }

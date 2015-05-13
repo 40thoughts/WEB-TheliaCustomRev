@@ -11041,6 +11041,8 @@ select[multiple].option .option-content .form-control {
   margin-left: -15px;
   margin-right: -15px;
   margin-left: 0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
 }
 #folder-contents .contents > ul .item > article .content-image {
   position: relative;
@@ -11049,6 +11051,8 @@ select[multiple].option .option-content .form-control {
   padding-right: 15px;
   margin-bottom: 15px;
   padding: 0;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 @media (min-width: 768px) {
   #folder-contents .contents > ul .item > article .content-image {
@@ -11072,11 +11076,14 @@ select[multiple].option .option-content .form-control {
 @media (min-width: 768px) {
   #folder-contents .contents > ul .item > article .content-info {
     float: left;
-    width: 58.33333333%;
+    width: 83.33333333%;
   }
 }
 #folder-contents .contents > ul .item > article .content-info .name {
-  margin-top: 0;
+  margin: 10px;
+  padding: 10px;
+  background-color: #e4e4e4;
+  border-radius: 4px;
 }
 @media (min-width: 768px) {
   .contents-grid .content-image,
@@ -11262,6 +11269,8 @@ select[multiple].option .option-content .form-control {
   margin-left: -15px;
   margin-right: -15px;
   margin-left: 0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
 }
 .contents-list .item > article .content-image {
   position: relative;
@@ -11270,6 +11279,8 @@ select[multiple].option .option-content .form-control {
   padding-right: 15px;
   margin-bottom: 15px;
   padding: 0;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 @media (min-width: 768px) {
   .contents-list .item > article .content-image {
@@ -11293,11 +11304,14 @@ select[multiple].option .option-content .form-control {
 @media (min-width: 768px) {
   .contents-list .item > article .content-info {
     float: left;
-    width: 58.33333333%;
+    width: 83.33333333%;
   }
 }
 .contents-list .item > article .content-info .name {
-  margin-top: 0;
+  margin: 10px;
+  padding: 10px;
+  background-color: #e4e4e4;
+  border-radius: 4px;
 }
 .brand-description {
   margin-bottom: 20px;
