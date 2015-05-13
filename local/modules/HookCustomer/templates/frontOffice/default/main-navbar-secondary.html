@@ -1,7 +1,7 @@
 <ul class="nav navbar-nav navbar-customer navbar-right">
     {loop type="auth" name="customer_info_block" role="CUSTOMER"}
     <li><a href="{url path="/logout"}" class="logout">{intl l="Log out!" d="hookcustomer.fo.default"}</a></li>
-    <li><a href="{url path="/account"}" class="account">{intl l="My Account" d="hookcustomer.fo.default"}</a></li>
+    <li><a href="{url path="/account"}" class="account"><span class="glyphicon glyphicon-user" style="color: #4992ff"></span> {intl l="My Account" d="hookcustomer.fo.default"}</a></li>
     {/loop}
     {elseloop rel="customer_info_block"}
     <li><a href="{url path="/register"}" class="register">{intl l="Register!" d="hookcustomer.fo.default"}</a></li>
