@@ -10842,7 +10842,7 @@ select[multiple]#form-forgotpassword .form-control {
     height: 55%;
     background: #e4e4e4;
     color: #0a3468;
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(0.25, #000000), to(#000000));
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#000000));
   }
   #products-new .product-info:hover .name,
   #products-offer .product-info:hover .name {
