@@ -30,9 +30,13 @@
     {if $content_id}
         {$breadcrumbs = []}
         {loop type="content" name="content-breadcrumb" id=$content_id limit="1"}
-            {loop name="folder_path" type="folder-path" folder="{$DEFAULT_FOLDER}"}
-                {$breadcrumbs[] = ['title' => {$TITLE}, 'url'=> {$URL nofilter}]}
-            {/loop}
+                {loop name="folder_path" type="folder-path" folder="{$DEFAULT_FOLDER}"}
+                    {if $DEFAULT_FOLDER eq "1"}
+                        {$breadcrumbs[] = ['title' => "{intl l='Blog'}", 'url'=> "/blog"]}
+                    {else}
+                        {$breadcrumbs[] = ['title' => {$TITLE}, 'url'=> {$URL nofilter}]}
+                    {/if}
+                {/loop}
             {$breadcrumbs[] = ['title' => {$TITLE}, 'url'=> {$URL nofilter}]}
         {/loop}
     {/if}
