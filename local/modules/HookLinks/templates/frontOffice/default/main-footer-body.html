@@ -1,5 +1,5 @@
 <ul>
-    <li><a href="/blog">Blog</a></li>
+    <li><a href="/blog">{intl l="Blog"}</a></li>
     {loop type="auth" name="customer_is_logged" role="CUSTOMER"}
     <li><a href="{url path="/logout"}" class="logout">{intl l="Log out!" d="hooklinks.fo.default"}</a></li>
     <li><a href="{url path="/account"}" class="account">{intl l="My Account" d="hooklinks.fo.default"}</a></li>
