@@ -1,4 +1,22 @@
 <!doctype html>
+<!--
+ ______   __  __     ______     __         __     ______
+/\__  _\ /\ \_\ \   /\  ___\   /\ \       /\ \   /\  __ \
+\/_/\ \/ \ \  __ \  \ \  __\   \ \ \____  \ \ \  \ \  __ \
+   \ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\  \ \_\ \_\
+    \/_/   \/_/\/_/   \/_____/   \/_____/   \/_/   \/_/\/_/
+
+
+Copyright (c) OpenStudio
+email : info@thelia.net
+web : http://www.thelia.net
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the
+GNU General Public License : http://www.gnu.org/licenses/
+-->
+
 {* Declare assets directory, relative to template base directory *}
 {declare_assets directory='assets'}
 {* Set the default translation domain, that will be used by {intl} when the 'd' parameter is not set *}
@@ -94,16 +112,14 @@
         </div>
     </div>
 
+
     <header class="container" role="banner">
         <div class="header">
-            <div class="container titlerow">
-                <h1 class="logo titlerow">
-                    <a href="{navigate to="index"}" title="{$store_name}">
-                        {images file='assets/img/logo.png'}<img src="{$asset_url}" alt="{$store_name}">{/images}
-                    </a>
-                </h1>
-                <h1 class="title titlerow"><a href="{navigate to="index"}">{$store_name}</a></h1>
-            </div>
+            <h1 class="logo">
+                <a href="{navigate to="index"}" title="{$store_name}">
+                    {images file='assets/img/logo.gif'}<img src="{$asset_url}" alt="{$store_name}">{/images}
+                </a>
+            </h1>
             {hook name="main.navbar-primary"}
         </div>
     </header><!-- /.header -->
@@ -198,7 +214,7 @@
                         <li><a href="{url path="/contact"}">{intl l="Contact Us"}</a></li>
                     </ul>
                 </nav>
-                <section class="copyright">{intl l="Copyright"} &copy; <time datetime="{'Y-m-d'|date}">{'Y'|date}</time> <a href="{navigate to="index"}" rel="external">{$store_name}</a></section>
+                <section class="copyright">{intl l="Copyright"} &copy; <time datetime="{'Y-m-d'|date}">{'Y'|date}</time> <a href="http://thelia.net" rel="external">Thelia</a></section>
             </div>
         </div>
     </footer><!-- /.footer-info -->

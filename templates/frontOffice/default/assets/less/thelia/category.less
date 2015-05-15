@@ -78,17 +78,13 @@
         }
 
         .product-info {
-            .name { margin: 4px 0; font-size: 1.2em; }
+            .name { margin: 4px 0; }
             .description { .visible-xs; }
             .short-description { display: block; margin-bottom: 5px; }
         }
 
         .product-price {
-            .price-container {
-                display: block;
-                margin-bottom: 5px;
-                .special-price, .old-price { display: block; }
-            }
+            .price-container { display: block; margin-bottom: 5px; }
             .product-btn {
                 .btn-cart { .btn-block; }
             }
@@ -122,48 +118,8 @@
             .product-price {
                 .make-sm-column(3);
                 text-align: right;
-                .price-container {
-                    .special-price, .old-price { display: block; }
-                }
+                .price-container {}
                 .product-btn {}
-            }
-        }
-    }
-}
-
-@media (min-width: @screen-tablet) {
-    #products-new, #products-offer {
-        a:hover { text-decoration: none; }
-
-        .product-info {
-            -webkit-transition: all 300ms linear;
-            transition: all 300ms linear;
-            display: block;
-            overflow: hidden;
-            position: absolute;
-            left: 15px;
-            right: 15px;
-            bottom: 0;
-            height: 50px;
-            background: @brand-primary;
-            color: #f5f5f5;
-            border-radius: 4px;
-            padding: 10px;
-            -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(0.25, rgba(0,0,0,1)), to(rgba(0,0,0,1)));
-            .name {
-                height: 65%;
-                margin-top: 10px;
-                overflow: hidden;
-            }
-        }
-
-        .product-info:hover {
-            height: 55%;
-            background: #e4e4e4;
-            color: @brand-primary;
-            -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,1)));
-            .name {
-                margin-top: 0;
             }
         }
     }

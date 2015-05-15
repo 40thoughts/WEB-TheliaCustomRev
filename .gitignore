@@ -48,6 +48,7 @@ templates/*
 !templates/frontOffice
 templates/frontOffice/*
 !templates/frontOffice/default
+!templates/frontOffice/randomlab
 !templates/backOffice
 templates/backOffice/*
 !templates/backOffice/default
@@ -57,6 +58,7 @@ templates/email/*
 !templates/pdf
 templates/pdf/*
 !templates/pdf/default
+!templates/pdf/randomlab
 
 #Ignore CodeKit
 codekit-config.json

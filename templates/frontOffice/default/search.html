@@ -19,7 +19,7 @@
 
     <article class="col-main  {$smarty.get.mode|default:"grid"}"  role="main" aria-labelledby="main-label">
 
-        <h2 id="main-label" class="page-header">{intl l="Search Result for"} <strong>{$smarty.get.q}</strong></h2>
+        <h1 id="main-label" class="page-header">{intl l="Search Result for"} <small>{$smarty.get.q}</small></h1>
         {assign var="amount" value="{count type="product" title="{$smarty.get.q}"}"}
         {include file="includes/toolbar.html" toolbar="top" limit=$limit order=$product_order amount={$amount}}
         <div id="category-products">
